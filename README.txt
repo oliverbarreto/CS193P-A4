@@ -1,5 +1,8 @@
-CS193P-A4.V1.0 - Initial Commit -
+CS193P-A4.V1.1.1 - Converted To Universal App -
 Completed:
+	- Converted to Universal App: iPhone & iPad
+	- Targeted to iOS 4.3 and later
+	
 - Required:
 	A.4.1:
 	A.4.2:

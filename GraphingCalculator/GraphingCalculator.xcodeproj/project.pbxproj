@@ -32,6 +32,8 @@
 		AD22772C1410171000DC6DAA /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2277281410171000DC6DAA /* CalculatorBrain.m */; };
 		AD339BE41413E35100176DC2 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD339BE21413E35100176DC2 /* GraphViewController.m */; };
 		AD339BE71413E37A00176DC2 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD339BE61413E37A00176DC2 /* GraphViewController.xib */; };
+		AD86E413141EB253004B7F3B /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD86E411141EB253004B7F3B /* MainWindow-iPad.xib */; };
+		AD86E415141EB5F6004B7F3B /* icon ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E414141EB5F6004B7F3B /* icon ipad.png */; };
 		AD8F259414165494005F5903 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8F259314165494005F5903 /* icon.png */; };
 		AD9A02C51410F0B500B4B765 /* AxesDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9A02C41410F0B500B4B765 /* AxesDrawer.m */; };
 		ADCFCD8B1411245D00F94DC0 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCFCD8A1411245D00F94DC0 /* GraphView.m */; };
@@ -79,6 +81,8 @@
 		AD339BE11413E35100176DC2 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		AD339BE21413E35100176DC2 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		AD339BE61413E37A00176DC2 /* GraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
+		AD86E412141EB253004B7F3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		AD86E414141EB5F6004B7F3B /* icon ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon ipad.png"; sourceTree = "<group>"; };
 		AD8F259314165494005F5903 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		AD9A02C31410F0B500B4B765 /* AxesDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxesDrawer.h; sourceTree = "<group>"; };
 		AD9A02C41410F0B500B4B765 /* AxesDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxesDrawer.m; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		AD2276D01410164900DC6DAA = {
 			isa = PBXGroup;
 			children = (
+				AD86E414141EB5F6004B7F3B /* icon ipad.png */,
 				AD2276E51410164900DC6DAA /* GraphingCalculator */,
 				AD2277011410164A00DC6DAA /* GraphingCalculatorTests */,
 				AD2276DE1410164900DC6DAA /* Frameworks */,
@@ -146,6 +151,7 @@
 			children = (
 				AD227715141016E800DC6DAA /* Classes */,
 				AD227713141016D300DC6DAA /* Resources */,
+				AD86E410141EB251004B7F3B /* iPad */,
 				AD2276E61410164900DC6DAA /* Supporting Files */,
 			);
 			path = GraphingCalculator;
@@ -233,6 +239,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		AD86E410141EB251004B7F3B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				AD86E411141EB253004B7F3B /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +325,8 @@
 				AD22772A1410171000DC6DAA /* CalculatorViewController.xib in Resources */,
 				AD339BE71413E37A00176DC2 /* GraphViewController.xib in Resources */,
 				AD8F259414165494005F5903 /* icon.png in Resources */,
+				AD86E413141EB253004B7F3B /* MainWindow-iPad.xib in Resources */,
+				AD86E415141EB5F6004B7F3B /* icon ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		AD86E411141EB253004B7F3B /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD86E412141EB253004B7F3B /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -423,6 +447,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -441,6 +466,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -451,7 +477,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraphingCalculator/GraphingCalculator-Prefix.pch";
 				INFOPLIST_FILE = "GraphingCalculator/GraphingCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -462,7 +490,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraphingCalculator/GraphingCalculator-Prefix.pch";
 				INFOPLIST_FILE = "GraphingCalculator/GraphingCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
