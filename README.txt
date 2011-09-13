@@ -1,12 +1,16 @@
-CS193P-A4.V1.1.1 - Converted To Universal App -
+CS193P-A4.V1.1.2 - Converted To Universal App -
 Completed:
-	- Converted to Universal App: iPhone & iPad
-	- Targeted to iOS 4.3 and later
+	- UIGestureRecognizers:
+		- Added UIGestureRecognizers: pinch, pan & tap to the GraphView from the GraphViewController
+		- Added UIGestureRecognizers selectors to GraphView
+		- Removed zoomIn & zoomOut Buttons and IBAction Methods
+	
+	- Changed GraphView to use Scale and Origin Properties
 	
 - Required:
 	A.4.1:
 	A.4.2:
-	A.4.3:
+	A.4.3: Done
 	A.4.4:
 	A.4.5:
 	A.4.6:

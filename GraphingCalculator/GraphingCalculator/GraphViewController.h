@@ -26,7 +26,7 @@
 @property (retain) IBOutlet GraphView *myGraphView;
 @property (nonatomic, retain) IBOutlet UILabel *scaleLabel;
 
-- (IBAction)zoomIn:(id)sender;
-- (IBAction)zoomOut:(id)sender;
+//- (IBAction)zoomIn:(id)sender;
+//- (IBAction)zoomOut:(id)sender;
 
 @end

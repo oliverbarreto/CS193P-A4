@@ -9,7 +9,7 @@
 #import "GraphViewController.h"
 
 
-#pragma mark - Initialization & Property Methods
+#pragma mark - Property Methods
 
 @implementation GraphViewController
 @synthesize myScale, myOrigin;
@@ -20,11 +20,6 @@
 -(void)updateMyUI {
     self.scaleLabel.text = [NSString stringWithFormat:@"Scale: %.2f", self.myScale];
     [self.myGraphView setNeedsDisplay];
-}
-
-- (void)setup {
-    self.myOrigin = CGPointMake(0,0);
-    self.myScale = 14.0;
 }
 
 - (void)setMyExpression:(id)newExpression {
@@ -42,6 +37,14 @@
     }
     
     [self updateMyUI];
+}
+
+
+#pragma mark - Initialization
+
+- (void)setup {
+    self.myOrigin = CGPointMake(0,0);
+    self.myScale = 14.0;
 }
 
 
@@ -85,15 +88,15 @@
 }
 
 
-#pragma mark - IBAction Methods
-
-- (void)zoomIn:(id)sender {
-    self.myScale *= 0.8;
-}
-
-- (void)zoomOut:(id)sender {
-    self.myScale /= 0.8;
-}
+//#pragma mark - IBAction Methods
+//
+//- (void)zoomIn:(id)sender {
+//    self.myScale *= 0.8;
+//}
+//
+//- (void)zoomOut:(id)sender {
+//    self.myScale /= 0.8;
+//}
 
 
 
@@ -113,6 +116,29 @@
     
     // Do any additional setup after loading the view from its nib.
     self.myGraphView.delegate = self;
+    
+    
+    // Add Gesture Recognizers to GraphView
+    UIGestureRecognizer *panGesture =
+        [[UIPanGestureRecognizer alloc] initWithTarget:myGraphView action:@selector(pan:)];
+    //[panGesture setMinimumNumberOfTouches:1];
+	//[panGesture setMaximumNumberOfTouches:1];
+    [myGraphView addGestureRecognizer:panGesture];
+    [panGesture release];
+    
+    UIGestureRecognizer *pinchGesture =
+    [[UIPinchGestureRecognizer alloc] initWithTarget:myGraphView action:@selector(pinch:)];
+    [myGraphView addGestureRecognizer:pinchGesture];
+    [pinchGesture release];
+    
+    UIGestureRecognizer *doubleTapGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:myGraphView action:@selector(doubleTap:)];
+    [doubleTapGesture setNumberOfTapsRequired:2];
+    [myGraphView addGestureRecognizer:doubleTapGesture];
+    [doubleTapGesture release];
+    
+    
+    //Update UI before getting out
     [self updateMyUI];
 }
 

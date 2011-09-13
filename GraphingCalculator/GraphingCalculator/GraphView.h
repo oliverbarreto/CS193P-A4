@@ -23,7 +23,13 @@
 
 @interface GraphView : UIView {
     id <GraphViewDelegate> delegate;
-
+    CGFloat scale;
+    CGPoint origin;
+    
 }
 @property (assign) id <GraphViewDelegate> delegate;
+@property CGFloat scale;
+@property CGPoint origin;
+
+
 @end
